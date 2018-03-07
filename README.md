@@ -2,4 +2,4 @@
 WebGL编程指南练习
 
 ## 第一章
-- [最短的WebGL程序：清空绘图区](https://github.com/masakulaYOU/WebGL_demo/tree/ch01/HelloCanvas)
+- [最短的WebGL程序：清空绘图区](https://github.com/masakulaYOU/WebGL_demo/tree/master/ch01/HelloCanvas)
