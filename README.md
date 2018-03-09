@@ -11,4 +11,4 @@ WebGL编程指南练习
 ## 第三章
 - [绘制多个点](https://github.com/masakulaYOU/WebGL_demo/tree/master/ch03/MultiPoints)
 - [绘制三角形](https://github.com/masakulaYOU/WebGL_demo/tree/master/ch03/HelloTriangle)
-- [绘制矩形](https://github.com/masakulaYOU/WebGL_demo/tree/master/ch03/HelloReactangle) 
+- [绘制矩形](https://github.com/masakulaYOU/WebGL_demo/tree/master/ch03/HelloRectangle) 
