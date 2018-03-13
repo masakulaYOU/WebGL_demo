@@ -14,3 +14,8 @@ WebGL编程指南练习
 - [绘制矩形](https://github.com/masakulaYOU/WebGL_demo/tree/master/ch03/HelloRectangle) 
 - [平移三角形](https://github.com/masakulaYOU/WebGL_demo/tree/master/ch03/TranslatedTriangle)
 - [旋转三角形](https://github.com/masakulaYOU/WebGL_demo/tree/master/ch03/RotatedTriangle)
+
+## 第四章
+- [旋转矩阵](https://github.com/masakulaYOU/WebGL_demo/tree/master/ch04/RotatedTriangle_Matrix4)
+- [复合变换](https://github.com/masakulaYOU/WebGL_demo/tree/master/ch04/RotatedTranslatedTriangle)
+- [动画效果](https://github.com/masakulaYOU/WebGL_demo/tree/master/ch04/RotatingTriangles)
