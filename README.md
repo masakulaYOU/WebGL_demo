@@ -19,3 +19,8 @@ WebGL编程指南练习
 - [旋转矩阵](https://github.com/masakulaYOU/WebGL_demo/tree/master/ch04/RotatedTriangle_Matrix4)
 - [复合变换](https://github.com/masakulaYOU/WebGL_demo/tree/master/ch04/RotatedTranslatedTriangle)
 - [动画效果](https://github.com/masakulaYOU/WebGL_demo/tree/master/ch04/RotatingTriangles)
+
+## 第五章
+- [改变点的大小](https://github.com/masakulaYOU/WebGL_demo/tree/master/ch05/MultiAttributeSize)
+- [交叉改变点的大小](https://github.com/masakulaYOU/WebGL_demo/tree/master/ch05/MultiAttributeSize_Interleaved)
+- [多种颜色的点](https://github.com/masakulaYOU/WebGL_demo/tree/master/ch05/MultiAttributeColor)
