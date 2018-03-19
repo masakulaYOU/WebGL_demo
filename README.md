@@ -25,3 +25,4 @@ WebGL编程指南练习
 - [交叉改变点的大小](https://github.com/masakulaYOU/WebGL_demo/tree/master/ch05/MultiAttributeSize_Interleaved)
 - [多种颜色的点](https://github.com/masakulaYOU/WebGL_demo/tree/master/ch05/MultiAttributeColor)
 - [纹理](https://github.com/masakulaYOU/WebGL_demo/tree/master/ch05/TextureQuad)
+- [多幅纹理](https://github.com/masakulaYOU/WebGL_demo/tree/master/ch05/MultiTexture)
