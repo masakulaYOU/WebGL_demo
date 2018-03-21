@@ -26,3 +26,6 @@ WebGL编程指南练习
 - [多种颜色的点](https://github.com/masakulaYOU/WebGL_demo/tree/master/ch05/MultiAttributeColor)
 - [纹理](https://github.com/masakulaYOU/WebGL_demo/tree/master/ch05/TextureQuad)
 - [多幅纹理](https://github.com/masakulaYOU/WebGL_demo/tree/master/ch05/MultiTexture)
+
+## 第七章
+- [视点、观察目标点和上方向](https://github.com/masakulaYOU/WebGL_demo/tree/master/ch07/LookAtTriangles)
