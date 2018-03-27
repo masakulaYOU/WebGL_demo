@@ -29,4 +29,4 @@ WebGL编程指南练习
 
 ## 第七章
 - [视点、观察目标点和上方向](https://github.com/masakulaYOU/WebGL_demo/tree/master/ch07/LookAtTriangles)
-- [从指定搞试点观察旋转后的三角形](https://github.com/masakulaYOU/WebGL_demo/tree/master/ch07/LookAtRotatedTriangles)
+- [从指定视点观察旋转后的三角形](https://github.com/masakulaYOU/WebGL_demo/tree/master/ch07/LookAtRotatedTriangles)
