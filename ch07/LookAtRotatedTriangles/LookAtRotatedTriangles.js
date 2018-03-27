@@ -1,13 +1,14 @@
-// LookAtTriangles.js
-// 视点、观察目标点和上方向
+// LookAtRotatedTriangles.js
+// 从指定搞试点观察旋转后的三角形
 
 var VSHADER_SOURCE = `
   attribute vec4 a_Position;
   attribute vec4 a_Color;
   uniform mat4 u_ViewMatrix;
+  uniform mat4 u_ModelMatrix;
   varying vec4 v_Color;
   void main() {
-    gl_Position = u_ViewMatrix * a_Position;
+    gl_Position = u_ViewMatrix * u_ModelMatrix * a_Position;
     v_Color = a_Color;
   }
 `;
@@ -40,17 +41,27 @@ function main() {
   }
 
   var u_ViewMatrix = gl.getUniformLocation(gl.program, 'u_ViewMatrix');
+  var u_ModelMatrix = gl.getUniformLocation(gl.program, 'u_ModelMatrix');
   if (!u_ViewMatrix) {
     console.log('Failed to get the location of u_ViewMatrix');
     return;
+  }
+
+  if (!u_ModelMatrix) {
+    console.log('Failed to get the location of u_ModelMatrix');
   }
 
   // 设置视点、视线和上方向
   var viewMatrix = new Matrix4();
   viewMatrix.setLookAt(0.20, 0.25, 0.25, 0, 0, 0, 0, 1, 0);
 
+  // 计算旋转矩阵
+  var modelMatrix = new Matrix4();
+  modelMatrix.setRotate(-10, 0, 0 ,1);
+
   // 将视图矩阵传给u_ViewMatrix变量
   gl.uniformMatrix4fv(u_ViewMatrix, false, viewMatrix.elements);
+  gl.uniformMatrix4fv(u_ModelMatrix, false, modelMatrix.elements);
 
   gl.clearColor(0.0, 0.0, 0.0, 1.0);
 
