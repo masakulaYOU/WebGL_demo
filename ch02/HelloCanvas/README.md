@@ -18,7 +18,7 @@ const gl = getWebGLContext(canvas);
 // getWebGLContext函数位于cuon-utils.js文件中
 ``` 
 
-<table border="1">
+<table border="1" frame="void">
 
 <tr>
 <td>方法</td>
