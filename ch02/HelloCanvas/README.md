@@ -60,59 +60,129 @@ const gl = getWebGLContext(canvas);
 
 
 
-设置canvas背景色
+
+
+### 设置canvas背景色
 ```javascript
 gl.clearColor(r, g, b, a)
 ```
-清空canvas，用之前的背景色填充，擦除已经绘制的内容
+<table border="1" frame="void">
+
+<tr>
+<td>方法</td>
+<td colspan="2">gl.clearColor(red, green, blue, alpha)</td>
+</tr>
+
+<tr>
+<td>描述</td>
+<td colspan="2">指定绘图区域的背景色</td>
+</tr>
+
+
+<tr>
+<td rowspan="5">参数</td>
+<td>red</td>
+<td>指定红色值(0.0到1.0)</td>
+</tr>
+
+<tr>
+<td>green</td>
+<td>指定绿色值(0.0到1.0)</td>
+</tr>
+
+<tr>
+<td>blue</td>
+<td>指定蓝色值(0.0到1.0)</td>
+</tr>
+
+<tr>
+<td>alpha</td>
+<td>指定透明度值(0.0到1.0)</td>
+</tr>
+
+<tr>
+<td colspan="2">如果任何值小于0.0或大于1.0，那么就会分别截断为0.0和1.0</td>
+</tr>
+
+<tr>
+<td>返回值</td>
+<td colspan="2">无</td>
+</tr>
+
+<tr>
+<td>错误</td>
+<td colspan="2">无</td>
+</tr>
+
+
+</table>
+
+程序中执行了`gl.clearColor(0.0, 0.0, 0.0, 1.0)`,背景色被指定为黑色，还可以指定为其他颜色
+- `(1.0, 0.0, 0.0, 1.0)` 红色
+- `(0.0, 1.0, 0.0, 1.0)` 绿色
+- `(0.0, 0.0, 1.0, 1.0)` 蓝色
+- `(1.0, 1.0, 0.0, 1.0)` 黄色
+- `(1.0, 0.0, 1.0, 1.0)` 紫色
+- `(0.0, 1.0, 1.0, 1.0)` 青色
+- `(1.0, 1.0, 1.0, 1.0)` 白色
+
+
+
+### 清空canvas
+用之前的背景色填充，擦除已经绘制的内容
 ```javascript
 gl.clear(gl.COLOR_BUFFER_BIT)
 ```
+<table border="1" frame="void">
 
-## 相关函数
+<tr>
+<td>方法</td>
+<td colspan="2">gl.clear(buffer)</td>
+</tr>
 
-`gl.clearColor`
-
-```javascript
-gl.clearColor(red, green, blue, alpha)
-/*
-指定绘图区域的背景色
-
-参数
-red 指定红色值(0.0到1.0)
-green 指定绿色值(0.0到1.0)
-blue 指定蓝色值(0.0到1.0)
-alpha 指定透明度值(0.0到1.0)
-如果任何一个值小于0.0或大于1.0，那么就会分别断接为0.0和1.0
-
-返回值 无
-
-错误 无
-*/
-```
+<tr>
+<td>描述</td>
+<td colspan="2">将指定缓冲区设定为预定的值。如果清空的是颜色缓冲区，那么将使用gl.clearColor()指定的值（作为预设值）</td>
+</tr>
 
 
-`gl.clear`
+<tr>
+<td rowspan="4">参数</td>
+<td>buffer</td>
+<td>指定待清空的缓冲区，位操作符OR(|)可以用来指定多个缓冲区</td>
+</tr>
 
-```javascript
-gl.clear(buffer)
+<tr>
+<td>gl.COLOR_BUFFER_BIT</td>
+<td>指定颜色缓存</td>
+</tr>
 
-/*
-将指定的缓冲区设定为预定的值，如果清空的是颜色缓冲区，那么将使用gl.clearColor()指定的值（作为预设值）
+<tr>
+<td>gl.DEPTH_BUFFER_BIT</td>
+<td>指定深度缓冲区</td>
+</tr>
 
-参数  
-buffer 指定清除的缓存区，位操作符OR(|)可用来指定多个缓冲区
-      gl.COLOR_BUFFER_BIT 指定颜色缓存，对应gl.clearColor(r, g, b, a)
-      gl.DEPTH_BUFFER_BIT 指定深度缓存，对应gl.clearDepth(depth)
-      gl.STENCIL_BUFFER_BIT 指定模板缓存，对应gl.clearStencil(s)
+<tr>
+<td>gl.STENCIL_BUFFER_BIT</td>
+<td>指定模板缓冲区</td>
+</tr>
 
-返回值 无
 
-错误 INVALID_VALUE 缓冲区不是以上三种类型
-*/
-```
+<tr>
+<td>返回值</td>
+<td colspan="2">无</td>
+</tr>
 
-清空缓冲区的默认颜色及其相关函数
+<tr>
+<td>错误</td>
+<td>INVALID_VALUE</td>
+<td>缓冲区不是以上三种类型</td>
+</tr>
+
+
+</table>
+
+如果没有指定背景色(没有调用`gl.clearColor`)，那么使用的默认值如下：
 
 缓冲区名称|默认值|相关函数
 --|--|--
