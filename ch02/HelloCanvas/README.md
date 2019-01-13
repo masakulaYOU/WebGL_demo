@@ -1,12 +1,65 @@
 # Hello Canvas
 ## 步骤
 
-为WebGL获取绘图上下文
+1. 获取`<canvas>`元素
+2. 获取`WebGL`绘图上下文
+3. 设置背景色
+4. 清空`<canvas>`
+
+### 获取`<canvas>`元素
+``` javascript
+const canvas = document.getElementById('webgl');
+``` 
+
+### 获取`WebGL`绘图上下文
   
 ```javascript
-canvas.getContext('webgl')
-// webgl experimental-webgl webkit-3d moz-webgl
+const gl = getWebGLContext(canvas);
+// getWebGLContext函数位于cuon-utils.js文件中
 ``` 
+
+<table border="1">
+
+<tr>
+<td>方法</td>
+<td colspan="2">getWebGLContext(element[, debug])</td>
+</tr>
+
+<tr>
+<td>描述</td>
+<td colspan="2">获取WebGL上下文，如果开启了debug属性，遇到错误时将在控制台显示错误消息</td>
+</tr>
+
+
+<tr>
+<td rowspan="2">参数</td>
+<td>element</td>
+<td>指定&lt;canvas&gt;元素</td>
+</tr>
+
+<tr>
+<td>debug(optional)</td>
+<td>默认为false，如果设置为true，Javascript中发生的错误将被显示在控制台上。注意，在调试结束后关闭它，否则会影响性能</td>
+</tr>
+
+
+<tr>
+<td rowspan="2">返回值</td>
+<td>non-null</td>
+<td> WebGL绘图上下文</td>
+</tr>
+
+<tr>
+<td>null</td>
+<td>WebGL不可用</td>
+</tr>
+
+
+</table>
+
+
+
+
 设置canvas背景色
 ```javascript
 gl.clearColor(r, g, b, a)

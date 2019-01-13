@@ -1,6 +1,24 @@
 # HelloPoint1
 ## 步骤
-定义顶点着色器、片段着色器
+1. 获取`<canvas>`元素
+2. 获取`WebGL`绘图上下文
+3. 初始化着色器
+4. 设置`<canvas>`背景色
+5. 清除`<canvas>`
+6. 绘图
+
+### 获取`<canvas>`元素
+```javascript
+const canvas = document.getElementById('webgl');
+const gl = getWebGLContext(canvas);
+
+if (!gl) {
+  console.log('Failed to get the rendering context for WebGL');
+  return;
+}
+```
+
+### 定义顶点着色器、片段着色器
 ```javascript
 // 顶点着色器
 const VSHADER_SOURCE = `
@@ -18,7 +36,7 @@ const FSHADER_SOURCE = `
 `;
 ```
 
-初始化着色器
+### 初始化着色器
 
 ```javascript
 initShaders(gl, vshader, fshader)
@@ -26,19 +44,19 @@ initShaders(gl, vshader, fshader)
 
 [*initShaders的运作原理*]()
 
-设置背景色
+### 设置`<canvas>`背景色
 
 ```javascript
 gl.clearColor(0.0,0.0,0.0,1.0)
 ```
 
-清空canvas
+### 清空`<canvas>`
 
 ```javascript
-gl.clear()
+gl.clear(gl.COLOR_BUFFER_BIT);
 ```
 
-绘制点
+### 绘图
 
 ```javascript
 gl.drawArrays(gl.POINTS, 0, 1)

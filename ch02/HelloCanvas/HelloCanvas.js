@@ -1,7 +1,7 @@
 // HelloCanvas.js
 function main() {
   // 获取canvas元素
-  var canvas = document.getElementById('webgl');
+  const canvas = document.getElementById('webgl');
 
   // 获取WebGL上下文
   const gl = getWebGLContext(canvas);
